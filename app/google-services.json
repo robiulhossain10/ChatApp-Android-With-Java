@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "337905055471",
+    "project_id": "androidapp-55747",
+    "storage_bucket": "androidapp-55747.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:337905055471:android:43f5654bb5a355044e4d1a",
+        "android_client_info": {
+          "package_name": "com.robiul.chatapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSQUOouufU80rNtSf6WghJOMaHgkWxdgs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
