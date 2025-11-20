@@ -1,6 +1,7 @@
 package com.robiul.chatapp.adapters;
 
 
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -90,20 +91,25 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHold
                 userInitial.setBackgroundColor(avatarColors[colorIndex]);
             }
 
-            // Set online status
+            // Check if user is online
             boolean isOnline = user.getFcmToken() != null && !user.getFcmToken().isEmpty();
+
             if (isOnline) {
                 userStatus.setText("Online");
                 userStatus.setTextColor(itemView.getContext().getColor(android.R.color.holo_green_dark));
+                onlineIndicator.setBackgroundTintList(
+                        ColorStateList.valueOf(itemView.getContext().getColor(android.R.color.holo_green_dark))
+                );
                 onlineIndicator.setVisibility(View.VISIBLE);
             } else {
                 userStatus.setText("Offline");
-                userStatus.setTextColor(itemView.getContext().getColor(android.R.color.darker_gray));
-                onlineIndicator.setVisibility(View.GONE);
+                userStatus.setTextColor(itemView.getContext().getColor(android.R.color.holo_red_dark));
+                onlineIndicator.setBackgroundTintList(
+                        ColorStateList.valueOf(itemView.getContext().getColor(android.R.color.holo_red_dark))
+                );
+                onlineIndicator.setVisibility(View.VISIBLE); // keep it visible as red
             }
 
-            // Last seen time (you can add this field to User model later)
-            userStatus.setText(isOnline ? "Online" : "Last seen recently");
 
             itemView.setOnClickListener(v -> {
                 if (listener != null) {

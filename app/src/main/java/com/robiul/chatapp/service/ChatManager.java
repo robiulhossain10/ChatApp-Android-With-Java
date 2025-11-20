@@ -4,6 +4,7 @@ import android.util.Log;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.*;
 import com.robiul.chatapp.models.ChatMessage;
+import com.robiul.chatapp.models.User;
 
 import java.util.*;
 
